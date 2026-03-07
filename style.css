@@ -98,3 +98,34 @@ nav {
     cursor: pointer;
     border-radius: 15px;
 }
+
+main{
+    padding: 24px;
+    overflow-y: auto;
+    flex-grow: 1;
+}
+
+.Search-Bar{
+    gap: 9.5px;
+    align-items: center;
+    display: flex;
+    background-color: #242424;
+    padding: 8px 16px;
+    width: 300px;
+    border-radius: 20px;
+}
+
+.Search-Bar input{
+    border: none;
+    background-color: transparent;
+    color: white;
+    width: 100%;
+    outline: none;
+}
+
+.Artistas-Grid, .Albuns-Grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(145px, 1fr));
+    gap: 24px;
+    margin-bottom: 40px;
+}

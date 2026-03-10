@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 * {
     margin: 0;
@@ -27,10 +27,11 @@ nav {
     padding: 24px 10px 90px;
     display: flex;
     flex-direction: column;
+    border-radius: 0 20px 0 0;
 }
 
 .Logo i {
-    font-size: 24px;
+    font-size: 22px;
 }
 
 .Nav-Biblioteca {
@@ -45,7 +46,7 @@ nav {
 
 .Nav-Playlist,
 .Nav-Podcast {
-    margin-top: 15px;
+    margin-top: 22.25px;
     background-color: #242424;
     padding: 16px;
     border-radius: 8px;
@@ -54,18 +55,26 @@ nav {
     align-items: flex-start;
     gap: 8px;
     box-shadow: 0px 0px 3px -1px #ffffff;
+    transition: box-shadow 0.1s ease-in-out;
 }
 
-.Nav-Playlist button, .Nav-Podcast button {
+.Nav-Playlist:hover,
+.Nav-Podcast:hover {
+    box-shadow: 0px 0px 6px -1px #25D865;
+}
+
+.Nav-Playlist button,
+.Nav-Podcast button {
     border: none;
     padding: 5px 10px;
     border-radius: 10px;
     color: black;
-    background-color: white;
+    background-color: #25D865;
     font-size: 15px;
 }
 
-.Nav-Playlist p, .Nav-Podcast p{
+.Nav-Playlist p,
+.Nav-Podcast p {
     font-size: 12px;
 }
 
@@ -73,39 +82,46 @@ nav {
     margin-top: auto;
 }
 
-
-.Nav-Footer a{
+.Nav-Footer a {
     color: #a7a7a7;
     text-decoration: none;
     font-size: 12px;
     margin-right: 12px;
     margin-bottom: 8px;
     position: relative;
-    transition: color 0.3s ease, transform 0.3s ease;
+    transition:
+        color 0.3s ease,
+        transform 0.3s ease;
 }
 
-.Nav-Footer a:hover{
+.Nav-Footer a:hover {
     color: white;
-    transform: scale(1.10);
+    transform: scale(1.1);
 }
 
-.Nav-Lang-Button{
+.Nav-Lang-Button {
     background-color: transparent;
     border: 1px solid white;
     color: white;
     padding: 8px 12px;
     margin-top: 16px;
     cursor: pointer;
-    border-radius: 15px;
+    border-radius: 10px;
+    transition:
+        background-color 0.3s ease-in;
 }
 
-main{
+.Nav-Lang-Button:hover {
+    background-color: black;
+}
+
+main {
     padding: 24px;
     overflow-y: auto;
     flex-grow: 1;
 }
 
-.Search-Bar{
+.Search-Bar {
     gap: 9.5px;
     align-items: center;
     display: flex;
@@ -115,7 +131,7 @@ main{
     border-radius: 20px;
 }
 
-.Search-Bar input{
+.Search-Bar input {
     border: none;
     background-color: transparent;
     color: white;
@@ -123,14 +139,16 @@ main{
     outline: none;
 }
 
-.Artistas-Grid, .Albuns-Grid{
+.Artistas-Grid,
+.Albuns-Grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
     gap: 24px;
     margin-bottom: 40px;
 }
 
-.Artista-Card, .Albuns-Card{
+.Artista-Card,
+.Albuns-Card {
     background-color: #181818;
     padding: 16px;
     border-radius: 8px;
@@ -141,33 +159,66 @@ main{
     flex-direction: column;
     justify-content: space-around;
     height: 100%;
-
 }
 
-.Artista-Card:hover, .Albuns-Card:hover{
+.Artista-Card:hover,
+.Albuns-Card:hover {
     background-color: #282828;
 }
 
-.Artista-Card img, .Albuns-Card img {
+.Artista-Card img,
+.Albuns-Card img {
     object-fit: cover;
     aspect-ratio: 1/1;
     width: 100%;
     margin-bottom: 20px;
 }
 
-.Artista-Card img{
+.Artista-Card img {
     border-radius: 50%;
 }
 
-.Albuns-Card img{
+.Albuns-Card img {
     border-radius: 4px;
 }
 
-.Artista-Card h3, .Albuns-Card h3 {
+.Artista-Card h3,
+.Albuns-Card h3 {
     font-size: 12px;
 }
 
-.Artista-Card p, .Albuns-Card p {
+.Artista-Card p,
+.Albuns-Card p {
     font-size: 12px;
     color: #b7b3b6;
+}
+
+.Banner {
+    border-radius: 20px 20px 0 0;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(90deg, #af2896, #509bf5);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 9px 14px;
+}
+
+.Banner h2 {
+    font-size: 14px;
+}
+
+.Banner p {
+    font-size: 10px;
+}
+
+.Banner button {
+    border: none;
+    border-radius: 20px;
+    color: #000;
+    font-weight: 600;
+    padding: 12px 20px;
+    cursor: pointer;
 }

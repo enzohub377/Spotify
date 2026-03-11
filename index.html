@@ -1,68 +1,83 @@
 <!doctype html>
 <html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
-    <script src="script.js" defer></script>
-    <script
-      src="https://kit.fontawesome.com/a6a245a587.js"
-      crossorigin="anonymous"
-    ></script>
-    <title>Spotify</title>
-  </head>
-  <body>
-    <div class="container">
-      <nav>
-        <div class="Logo">
-            <i class="fa-brands fa-spotify" style="color: rgb(37, 216, 101);"></i>
-        </div>
-        <div class="Nav-Biblioteca">
-            <i class="fa-solid fa-book"></i>
-            <p>Sua Biblioteca +</p>
-        </div>
-        <div class="Nav-Playlist">
-            <br>Crie sua Primeira Playlist</h5>
-            <p>É facil vamos te ajudar</p>
-            <button>Criar Playlist</button>
-        </div>
-        <div class="Nav-Podcast">
-            <br>Que tal seguir um Podcast novo?</h5>
-            <p>Avisaremos você sobre novos episódios</p>
-            <button>Explorar Podcasts</button>
-        </div>
-        <div class="Nav-Footer">
-          <a href="#">Legal</a>
-          <a href="#">Centro de Privacidade</a>
-          <a href="#">Política de Privacidade</a>
-          <a href="#">Cookies</a>
-          <a href="#">Sobre Anúncios</a>
-          <a href="#">Acessibilidade</a>
-        </div>
-        <button class="Nav-Lang-Button">
-          <i class="fa-solid fa-globe"></i>
-          Português do Brasil
-        </button>
-      </nav>
-      <main>
-        <header class="Search-Bar">
-          <i class="fa-solid fa-magnifying-glass"></i>
-          <input type="text" placeholder="Oque procura?">
-        </header>
-        <section class="Content">
-          <h2>Artistas Populares</h2>
-          <div class="Artistas-Grid"></div>
-          <h2>Álbuns Populares</h2>
-          <div class="Albuns-Grid"></div>
-        </section>
-      </main>
-    </div>
-    <div class="Banner">
-      <div>
-        <h2>Oque acha de Testar o Premium de Graça?</h2>
-        <p>inscreva-se para curtir músicas ilimitadas só com alguns anúncios. Não precisa de um cartão de crédito.</p>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
+  <script src="https://kit.fontawesome.com/a6a245a587.js" crossorigin="anonymous"></script>
+  <title>Spotify</title>
+</head>
+
+<body>
+  <div class="container">
+    <nav>
+      <div class="Logo">
+        <i title="Spotify" class="fa-brands fa-spotify" style="color: rgb(37, 216, 101);"></i>
       </div>
-      <button>Inscreva-se Grátis</button>
+      <div class="Nav-Biblioteca">
+        <i class="fa-solid fa-book"></i>
+        <p>Sua Biblioteca +</p>
+      </div>
+      <div class="Nav-Playlist">
+        <br>Crie sua Primeira Playlist</h5>
+        <p>É facil vamos te ajudar</p>
+        <button>Criar Playlist</button>
+      </div>
+      <div class="Nav-Podcast">
+        <br>Que tal seguir um Podcast novo?</h5>
+        <p>Avisaremos você sobre novos episódios</p>
+        <button>Explorar Podcasts</button>
+      </div>
+      <div class="Nav-Footer">
+        <a href="#">Legal</a>
+        <a href="#">Centro de Privacidade</a>
+        <a href="#">Política de Privacidade</a>
+        <a href="#">Cookies</a>
+        <a href="#">Sobre Anúncios</a>
+        <a href="#">Acessibilidade</a>
+      </div>
+      <button class="Nav-Lang-Button">
+        <i class="fa-solid fa-globe"></i>
+        Português do Brasil
+      </button>
+    </nav>
+    <main>
+      <header>
+        <div class="Search-Bar">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input type="text" placeholder="Oque você quer ouvir hoje?">
+        </div>
+
+        <div class="Options">
+          <button class="See-Plans">Ver Planos Premium</button>
+
+          <button class="Download-APP">
+            <i class="fa-solid fa-download" style="color: rgb(255, 255, 255);"></i>
+            Instalar o APP
+          </button>
+
+          <i title="Novidades" class="fa-solid fa-bell" style="color: rgb(58, 58, 58);"></i>
+          <i title="Atividades de Amigos" class="fa-solid fa-user-group" style="color: rgb(58, 58, 58);"></i>
+          <p>U</p>
+        </div>
+      </header>
+      <section class="Content">
+        <h2>Artistas Populares</h2>
+        <div class="Artistas-Grid"></div>
+        <h2>Álbuns Populares</h2>
+        <div class="Albuns-Grid"></div>
+      </section>
+    </main>
+  </div>
+  <div class="Banner">
+    <div>
+      <h2>Oque acha de Testar o Premium de Graça?</h2>
+      <p>inscreva-se para curtir músicas ilimitadas só com alguns anúncios. Não precisa de um cartão de crédito.</p>
     </div>
-  </body>
+    <button>Inscreva-se Grátis</button>
+  </div>
+</body>
+
 </html>

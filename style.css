@@ -32,6 +32,7 @@ nav {
 
 .Logo i {
     font-size: 22px;
+    cursor: pointer;
 }
 
 .Nav-Biblioteca {
@@ -55,12 +56,12 @@ nav {
     align-items: flex-start;
     gap: 8px;
     box-shadow: 0px 0px 3px -1px #ffffff;
-    transition: box-shadow 0.1s ease-in-out;
+    transition: box-shadow 0.1s ease-in;
 }
 
 .Nav-Playlist:hover,
 .Nav-Podcast:hover {
-    box-shadow: 0px 0px 6px -1px #25D865;
+    box-shadow: 0px 0px 6px -1px #25d865;
 }
 
 .Nav-Playlist button,
@@ -69,8 +70,9 @@ nav {
     padding: 5px 10px;
     border-radius: 10px;
     color: black;
-    background-color: #25D865;
+    background-color: #25d865;
     font-size: 15px;
+    cursor: pointer;
 }
 
 .Nav-Playlist p,
@@ -107,8 +109,7 @@ nav {
     margin-top: 16px;
     cursor: pointer;
     border-radius: 10px;
-    transition:
-        background-color 0.3s ease-in;
+    transition: background-color 0.3s ease-in;
 }
 
 .Nav-Lang-Button:hover {
@@ -119,6 +120,12 @@ main {
     padding: 24px;
     overflow-y: auto;
     flex-grow: 1;
+}
+
+header{
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
 }
 
 .Search-Bar {
@@ -139,11 +146,84 @@ main {
     outline: none;
 }
 
+.Options{
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    width: 900px;
+    gap: 20px;
+}
+
+.Options i {
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.Options p {
+    font-size: 35px;
+    color: orangered;
+    background-color: #121212;
+    border-radius: 15px;
+    text-align: center;
+    width: 75px;
+    cursor: pointer;
+    transition: box-shadow 1s ease-in-out;
+}
+
+.Options p:hover{
+    box-shadow: 0 0 12px -2px #25d865;
+}
+
+.See-Plans{
+    cursor: pointer;
+    border-radius: 20px;
+    border: none;
+    padding: 5px 8px;
+    font-size: 15px;
+    font-weight: 500;
+    transition: 
+    box-shadow 0.5s ease-in-out,
+    transform 0.1s ease-in-out;
+}
+
+.See-Plans:hover{
+    box-shadow: 1px 1px 7px -1px white;
+    transform: scale(1.10);
+}
+
+.Download-APP{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border-radius: 20px;
+    border: none;
+    background-color: #181818;
+    padding: 5px 8px;
+    font-size: 13px;
+    color: white;
+    transition: transform 0.1s ease-in-out;
+    gap: 10px;
+}
+
+.Download-APP:hover{
+    transform: scale(1.05);
+}
+
+.Download-APP i{
+    font-size: 15px;
+}
+
 .Artistas-Grid,
 .Albuns-Grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
     gap: 24px;
+    margin-bottom: 10px;
+}
+
+.Albuns-Grid{
     margin-bottom: 40px;
 }
 

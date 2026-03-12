@@ -45,23 +45,34 @@ nav {
     cursor: pointer;
 }
 
+.Nav-Playlist {
+    background-color: #000000;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 1600 800'%3E%3Cg fill-opacity='0.28'%3E%3Cpolygon fill='%23003600' points='1600 160 0 460 0 350 1600 50'/%3E%3Cpolygon fill='%23005b00' points='1600 260 0 560 0 450 1600 150'/%3E%3Cpolygon fill='%23008314' points='1600 360 0 660 0 550 1600 250'/%3E%3Cpolygon fill='%2300ad3e' points='1600 460 0 760 0 650 1600 350'/%3E%3Cpolygon fill='%2325D865' points='1600 800 0 800 0 750 1600 450'/%3E%3C/g%3E%3C/svg%3E");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
 .Nav-Playlist,
 .Nav-Podcast {
     margin-top: 22.25px;
-    background-color: #242424;
     padding: 16px;
     border-radius: 8px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     gap: 8px;
-    box-shadow: 0px 0px 3px -1px #ffffff;
-    transition: box-shadow 0.1s ease-in;
+    box-shadow: 0 1px 2px oklch(0% 0 0 / 0.05);
+    box-shadow: 0 8px 16px oklch(0% 0 0 / 0.08);
+    box-shadow: 0 16px 32px oklch(0% 0 0 / 0.04);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .Nav-Playlist:hover,
 .Nav-Podcast:hover {
-    box-shadow: 0px 0px 6px -1px #25d865;
+    transform: translateY(-4px);
+    box-shadow: 0 20px 40px oklch(0% 0 0 / 0.12);
+
 }
 
 .Nav-Playlist button,
@@ -122,7 +133,7 @@ main {
     flex-grow: 1;
 }
 
-header{
+header {
     display: flex;
     align-items: center;
     margin-bottom: 10px;
@@ -146,7 +157,7 @@ header{
     outline: none;
 }
 
-.Options{
+.Options {
     display: flex;
     align-items: center;
     justify-content: right;
@@ -158,6 +169,12 @@ header{
     font-size: 20px;
     cursor: pointer;
     border-radius: 5px;
+    transition: color 0.3s ease-out;
+    color: #2d2d2d;
+}
+
+.Options i:hover {
+    color: #3d3d3d;
 }
 
 .Options p {
@@ -171,28 +188,28 @@ header{
     transition: box-shadow 1s ease-in-out;
 }
 
-.Options p:hover{
+.Options p:hover {
     box-shadow: 0 0 12px -2px #25d865;
 }
 
-.See-Plans{
+.See-Plans {
     cursor: pointer;
     border-radius: 20px;
     border: none;
     padding: 5px 8px;
     font-size: 15px;
     font-weight: 500;
-    transition: 
-    box-shadow 0.5s ease-in-out,
-    transform 0.1s ease-in-out;
+    transition:
+        box-shadow 1s ease-in-out,
+        transform 0.3s ease-in-out;
 }
 
-.See-Plans:hover{
+.See-Plans:hover {
     box-shadow: 1px 1px 7px -1px white;
     transform: scale(1.10);
 }
 
-.Download-APP{
+.Download-APP {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -207,11 +224,11 @@ header{
     gap: 10px;
 }
 
-.Download-APP:hover{
+.Download-APP:hover {
     transform: scale(1.05);
 }
 
-.Download-APP i{
+.Download-APP i {
     font-size: 15px;
 }
 
@@ -223,7 +240,7 @@ header{
     margin-bottom: 10px;
 }
 
-.Albuns-Grid{
+.Albuns-Grid {
     margin-bottom: 40px;
 }
 

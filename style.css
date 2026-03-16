@@ -97,7 +97,7 @@ nav {
     top: 0;
     background-position: center;
     background-size: cover;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 1600 800'%3E%3Cg fill-opacity='0.25'%3E%3Cpolygon fill='%23002e00' points='800 100 0 200 0 800 1600 800 1600 200'/%3E%3Cpolygon fill='%23004400' points='800 200 0 400 0 800 1600 800 1600 400'/%3E%3Cpolygon fill='%23006000' points='800 300 0 600 0 800 1600 800 1600 600'/%3E%3Cpolygon fill='%23007d0d' points='1600 800 800 400 0 800'/%3E%3Cpolygon fill='%23009b2d' points='1280 800 800 500 320 800'/%3E%3Cpolygon fill='%2300b949' points='533.3 800 1066.7 800 800 600'/%3E%3Cpolygon fill='%2325D865' points='684.1 800 914.3 800 800 700'/%3E%3C/g%3E%3C/svg%3E");
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 1600 800'%3E%3Cg stroke='%2325D865' stroke-width='100' stroke-opacity='0' %3E%3Ccircle fill='%23199445' cx='0' cy='0' r='1800'/%3E%3Ccircle fill='%23188b41' cx='0' cy='0' r='1700'/%3E%3Ccircle fill='%2316833d' cx='0' cy='0' r='1600'/%3E%3Ccircle fill='%23157a39' cx='0' cy='0' r='1500'/%3E%3Ccircle fill='%23137135' cx='0' cy='0' r='1400'/%3E%3Ccircle fill='%23126831' cx='0' cy='0' r='1300'/%3E%3Ccircle fill='%2310602d' cx='0' cy='0' r='1200'/%3E%3Ccircle fill='%230f5729' cx='0' cy='0' r='1100'/%3E%3Ccircle fill='%230d4e25' cx='0' cy='0' r='1000'/%3E%3Ccircle fill='%230c4620' cx='0' cy='0' r='900'/%3E%3Ccircle fill='%230a3d1c' cx='0' cy='0' r='800'/%3E%3Ccircle fill='%23093418' cx='0' cy='0' r='700'/%3E%3Ccircle fill='%23072c14' cx='0' cy='0' r='600'/%3E%3Ccircle fill='%23062310' cx='0' cy='0' r='500'/%3E%3Ccircle fill='%23041a0c' cx='0' cy='0' r='400'/%3E%3Ccircle fill='%23031108' cx='0' cy='0' r='300'/%3E%3Ccircle fill='%23010904' cx='0' cy='0' r='200'/%3E%3Ccircle fill='%23000000' cx='0' cy='0' r='100'/%3E%3C/g%3E%3C/svg%3E");
     z-index: -1;
     transform: scale(1.1);
     filter: blur(1px);
@@ -263,7 +263,7 @@ header {
 }
 
 .See-Plans:hover {
-    box-shadow: 1px 1px 7px -1px white;
+    box-shadow: 1px 1px 7px 1px white;
     transform: scale(1.10);
 }
 
@@ -358,22 +358,48 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 9px 14px;
+    padding: 3px 14px;
 }
 
 .Banner h2 {
-    font-size: 14px;
+    font-size: 16px;
 }
 
 .Banner p {
-    font-size: 10px;
+    font-size: 12px;
 }
 
-.Banner button {
+.SignUp-Button {
     border: none;
     border-radius: 20px;
     color: #000;
     font-weight: 600;
     padding: 12px 20px;
     cursor: pointer;
+    transform: translateX(0) scale(1);
+    transition: transform 2s ease-in-out;
+}
+
+.SignUp-Animation{
+    display: flex;
+    justify-content: flex-end;
+    background-color: red;
+    width: 900px;
+}
+
+.SignUp-Animation:hover .SignUp-Button{
+    animation: AnimationSignUP 2s forwards ease-in-out;
+    transform: translateX(calc(-450px + 50%)) scale(1.2);
+}
+
+@keyframes AnimationSignUP{
+    0%{
+        transform: translateX(0) scale(1);
+    }
+    70%{
+        transform: translateX(calc(-450px + 50%)) scale(1);
+    }
+    100%{
+        transform: translateX(calc(-450px + 50%)) scale(1.2);
+    }
 }

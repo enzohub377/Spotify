@@ -73,3 +73,16 @@ document.addEventListener("DOMContentLoaded", () => {
     albumsGrid.appendChild(albumsCard);
   });
 });
+
+const buttonSignUp = document.querySelector(".SignUp-Animation");
+const containerSignUp = document.querySelector(".SignUp");
+
+containerSignUp.addEventListener("mouseenter", () => {
+  buttonSignUp.classList.remove("SignUp-back");
+  buttonSignUp.classList.add("SignUp-going");
+});
+
+containerSignUp.addEventListener("mouseleave", () => {
+  buttonSignUp.classList.remove("SignUp-going");
+  buttonSignUp.classList.add("SignUp-back");
+});

@@ -362,7 +362,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 3px 14px;
+    padding: 0.5px 14px;
 }
 
 .Banner h2 {
@@ -370,10 +370,10 @@ header {
 }
 
 .Banner p {
-    font-size: 12px;
+    font-size: 14px;
 }
 
-.SignUp-Button {
+.SignUp-Animation {
     border: none;
     border-radius: 20px;
     color: #000;
@@ -382,18 +382,23 @@ header {
     cursor: pointer;
     transform: translateX(0) scale(1);
     transition: transform 2s ease-in-out;
+    animation: AnimationSignUP-Return 2s forwards ease-in-out;
+    backface-visibility: hidden;
 }
 
-.SignUp-Animation{
+.SignUp{
     display: flex;
     justify-content: flex-end;
-    background-color: red;
     width: 900px;
+    background-color: red;
 }
 
-.SignUp-Animation:hover .SignUp-Button{
+.SignUp-going{
     animation: AnimationSignUP 2s forwards ease-in-out;
-    transform: translateX(calc(-450px + 50%)) scale(1.2);
+}
+
+.SignUp-back{
+    animation: AnimationSignUP-Return 2s forwards ease-in-out;
 }
 
 @keyframes AnimationSignUP{
@@ -401,9 +406,21 @@ header {
         transform: translateX(0) scale(1);
     }
     70%{
-        transform: translateX(calc(-450px + 50%)) scale(1);
+        transform: translateX(-150px) scale(1);
     }
     100%{
-        transform: translateX(calc(-450px + 50%)) scale(1.2);
+        transform: translateX(-150px) scale(1.2);
+    }
+}
+
+@keyframes AnimationSignUP-Return {
+    0% {
+        transform: translateX(-150px) scale(1.2);
+    }
+    30% {
+        transform: translateX(-150px) scale(1);
+    }
+    100% {
+        transform: translateX(0) scale(1);
     }
 }
